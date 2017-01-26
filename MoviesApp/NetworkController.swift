@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class NetworkController {
     
-    private static var getAllMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=10/json"
+    private static var getAllMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=50/json"
     
     static func getAllMovies(completion: @escaping (_ movies: [Movie]) -> Void) {
         Alamofire.request(getAllMoviesUrl).responseJSON {

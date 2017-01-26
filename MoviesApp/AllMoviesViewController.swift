@@ -27,13 +27,10 @@ class AllMoviesViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         setCellWidth()
     }
-
 }
 
 
-
 extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.movies.count
     }
@@ -45,17 +42,17 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: cellWidth!, height: cellWidth! + 50)
+        return CGSize(width: cellWidth!, height: cellWidth! + 140)
     }
     
     func setCellWidth () {
         let flow: UICollectionViewFlowLayout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 2
-        cellWidth = Double(width) - 10
+        cellWidth = Double(width) - 0.5
     }
-    
-
 }
+
+
 

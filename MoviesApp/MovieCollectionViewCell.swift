@@ -17,7 +17,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     func initCell(from: Movie) {
         movieTitle.text = from.title!
-        movieImageView.kf.setImage(with: URL(string: from.image!))
+        movieImageView.kf.setImage(with: URL(string: from.image!), placeholder: UIImage(named: "popcorn"))
     }
     
 }

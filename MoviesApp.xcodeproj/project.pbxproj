@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080858D11E3A60E4005F30E0 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080858D01E3A60E4005F30E0 /* Media.xcassets */; };
 		082849C91E3A34A1003479C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082849C81E3A34A1003479C0 /* AppDelegate.swift */; };
 		082849CB1E3A34A1003479C0 /* AllMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */; };
 		082849CE1E3A34A1003479C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082849CC1E3A34A1003479C0 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		080858D01E3A60E4005F30E0 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		082849C51E3A34A1003479C0 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		082849C81E3A34A1003479C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMoviesViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				082849F61E3A39C6003479C0 /* Commons.swift */,
 				08284A081E3A4521003479C0 /* Movie.swift */,
 				08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */,
+				080858D01E3A60E4005F30E0 /* Media.xcassets */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				082849D31E3A34A1003479C0 /* LaunchScreen.storyboard in Resources */,
 				082849D01E3A34A1003479C0 /* Assets.xcassets in Resources */,
+				080858D11E3A60E4005F30E0 /* Media.xcassets in Resources */,
 				082849CE1E3A34A1003479C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +572,7 @@
 				082849EF1E3A34A2003479C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		082849F01E3A34A2003479C0 /* Build configuration list for PBXNativeTarget "MoviesAppTests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +581,7 @@
 				082849F21E3A34A2003479C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		082849F31E3A34A2003479C0 /* Build configuration list for PBXNativeTarget "MoviesAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +590,7 @@
 				082849F51E3A34A2003479C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -59,7 +59,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.52549019607843139" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.70196078431372544" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6Ah-ew-Gnv" secondAttribute="bottom" id="2cK-L1-fYE"/>
                                     <constraint firstItem="6Ah-ew-Gnv" firstAttribute="leading" secondItem="c0R-rG-Qjm" secondAttribute="leading" id="JUj-yh-WkH"/>
@@ -71,41 +71,42 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="JuB-Pe-ozm">
-                                    <size key="itemSize" width="176" height="281"/>
+                                    <size key="itemSize" width="169" height="291"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="O3o-ug-Y75" customClass="MovieCollectionViewCell" customModule="MoviesApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="176" height="281"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="176" height="281"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="169" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uu8-ho-wlD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="281"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="291"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cy0-ND-1ry">
-                                                            <rect key="frame" x="0.0" y="0.0" width="176" height="220"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="169" height="240"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="220" id="TZH-va-eUH"/>
+                                                                <constraint firstAttribute="height" constant="240" id="TZH-va-eUH"/>
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-8G-ZhU" userLabel="Text container">
-                                                            <rect key="frame" x="0.0" y="220" width="176" height="61"/>
+                                                            <rect key="frame" x="0.0" y="240" width="169" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-PW-nra">
-                                                                    <rect key="frame" x="10" y="15" width="156" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="10" y="5" width="149" height="36"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="iEp-PW-nra" firstAttribute="top" secondItem="0bd-8G-ZhU" secondAttribute="top" constant="15" id="axZ-B9-zLI"/>
+                                                                <constraint firstItem="iEp-PW-nra" firstAttribute="top" secondItem="0bd-8G-ZhU" secondAttribute="top" constant="5" id="axZ-B9-zLI"/>
+                                                                <constraint firstAttribute="bottom" secondItem="iEp-PW-nra" secondAttribute="bottom" constant="10" id="czo-RV-alN"/>
                                                                 <constraint firstAttribute="trailing" secondItem="iEp-PW-nra" secondAttribute="trailing" constant="10" id="u7d-4l-Aus"/>
                                                                 <constraint firstItem="iEp-PW-nra" firstAttribute="leading" secondItem="0bd-8G-ZhU" secondAttribute="leading" constant="10" id="wAK-qf-2gN"/>
                                                             </constraints>
