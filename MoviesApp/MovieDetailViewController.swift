@@ -18,6 +18,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var bigLikeImageView: UIImageView!
     
     var movie: Movie?
     
@@ -31,6 +32,18 @@ class MovieDetailViewController: UIViewController {
         directorLabel.text = directorLabel.text! + " " + movie!.director!
         durationLabel.text = durationLabel.text! + " " + movie!.duration!
         summaryLabel.text = movie!.summary!
+        configDoubleTapGestureRecognizer()
+    }
+    
+    func configDoubleTapGestureRecognizer() {
+        movieImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        movieImageView.addGestureRecognizer(tap)
+    }
+    
+    func doubleTapped() {
+        BigLikeAnimation.start(likeView: self.bigLikeImageView)
     }
 
     @IBAction func backPressed(_ sender: Any) {

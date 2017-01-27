@@ -29,6 +29,7 @@
 		47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */; };
 		47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */; };
 		47E0FEF11E3BD01100F7011A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEF01E3BD01100F7011A /* CustomButton.swift */; };
+		47E0FEF31E3BDCC300F7011A /* LikeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		47E0FEF01E3BD01100F7011A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,17 +147,16 @@
 			isa = PBXGroup;
 			children = (
 				47E0FEED1E3BCFBB00F7011A /* Utils */,
-				082849C81E3A34A1003479C0 /* AppDelegate.swift */,
+				47E0FEF41E3BDD7200F7011A /* Assets */,
+				082849D11E3A34A1003479C0 /* LaunchScreen.storyboard */,
+				082849CC1E3A34A1003479C0 /* Main.storyboard */,
 				08284A021E3A3F28003479C0 /* NetworkController.swift */,
 				082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */,
-				082849CC1E3A34A1003479C0 /* Main.storyboard */,
-				082849CF1E3A34A1003479C0 /* Assets.xcassets */,
-				082849D11E3A34A1003479C0 /* LaunchScreen.storyboard */,
-				082849D41E3A34A1003479C0 /* Info.plist */,
 				08284A081E3A4521003479C0 /* Movie.swift */,
 				08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */,
-				080858D01E3A60E4005F30E0 /* Media.xcassets */,
 				47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */,
+				082849C81E3A34A1003479C0 /* AppDelegate.swift */,
+				082849D41E3A34A1003479C0 /* Info.plist */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -202,8 +203,18 @@
 				082849F61E3A39C6003479C0 /* Commons.swift */,
 				47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */,
 				47E0FEF01E3BD01100F7011A /* CustomButton.swift */,
+				47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		47E0FEF41E3BDD7200F7011A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				082849CF1E3A34A1003479C0 /* Assets.xcassets */,
+				080858D01E3A60E4005F30E0 /* Media.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */,
 				082849C91E3A34A1003479C0 /* AppDelegate.swift in Sources */,
 				08284A091E3A4521003479C0 /* Movie.swift in Sources */,
+				47E0FEF31E3BDCC300F7011A /* LikeAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

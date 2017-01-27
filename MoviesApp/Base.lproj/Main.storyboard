@@ -278,6 +278,13 @@
                                                     <constraint firstItem="Wm0-6k-Zlj" firstAttribute="leading" secondItem="cea-uG-7F9" secondAttribute="trailing" id="TyS-yC-nnC"/>
                                                 </constraints>
                                             </stackView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big-like" translatesAutoresizingMaskIntoConstraints="NO" id="LbQ-PB-X1w">
+                                                <rect key="frame" x="64" y="123" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="coe-2E-uVk"/>
+                                                    <constraint firstAttribute="width" constant="60" id="kvP-Rq-EEi"/>
+                                                </constraints>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-B1-xr5" userLabel="Separator">
                                                 <rect key="frame" x="10" y="297" width="355" height="1"/>
                                                 <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,11 +337,13 @@
                                             <constraint firstItem="RBL-B1-xr5" firstAttribute="top" secondItem="ekY-Qy-LN6" secondAttribute="bottom" constant="15" id="Cr8-ry-jXr"/>
                                             <constraint firstAttribute="bottom" secondItem="Rsf-Ud-fyk" secondAttribute="bottom" constant="34.5" id="DVg-BR-abx"/>
                                             <constraint firstAttribute="trailing" secondItem="RBL-B1-xr5" secondAttribute="trailing" constant="10" id="K0Z-wy-8MU"/>
+                                            <constraint firstItem="LbQ-PB-X1w" firstAttribute="centerY" secondItem="cea-uG-7F9" secondAttribute="centerY" id="QzL-fr-g3M"/>
                                             <constraint firstAttribute="trailing" secondItem="fF8-JB-cij" secondAttribute="trailing" constant="10" id="ZsA-We-CMm"/>
                                             <constraint firstItem="fF8-JB-cij" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="jen-TZ-hwF"/>
                                             <constraint firstItem="Rsf-Ud-fyk" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="mLU-dj-1FD"/>
                                             <constraint firstItem="ekY-Qy-LN6" firstAttribute="top" secondItem="d1g-Oh-Ae6" secondAttribute="top" constant="24" id="o6t-7n-fWi"/>
                                             <constraint firstItem="BUF-9L-7MA" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="tha-AU-v5I"/>
+                                            <constraint firstItem="LbQ-PB-X1w" firstAttribute="centerX" secondItem="cea-uG-7F9" secondAttribute="centerX" id="uSn-60-Jvm"/>
                                             <constraint firstItem="BUF-9L-7MA" firstAttribute="top" secondItem="RBL-B1-xr5" secondAttribute="bottom" constant="15" id="ubc-e0-Cf1"/>
                                             <constraint firstItem="ekY-Qy-LN6" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="8" id="w5I-oi-aZO"/>
                                             <constraint firstAttribute="trailing" secondItem="ekY-Qy-LN6" secondAttribute="trailing" constant="23" id="wPd-kC-cLa"/>
@@ -343,7 +352,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="d1g-Oh-Ae6" firstAttribute="top" secondItem="nco-1L-aP8" secondAttribute="top" id="I0J-vL-lVb"/>
                                     <constraint firstItem="d1g-Oh-Ae6" firstAttribute="leading" secondItem="nco-1L-aP8" secondAttribute="leading" id="J5b-bz-eFu"/>
@@ -367,6 +376,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="540"/>
                     <connections>
+                        <outlet property="bigLikeImageView" destination="LbQ-PB-X1w" id="Rf5-nR-S5L"/>
                         <outlet property="categoryLabel" destination="MRI-4t-XEF" id="nLN-Zv-dNC"/>
                         <outlet property="directorLabel" destination="ysx-R4-Bh6" id="lIo-k0-ab0"/>
                         <outlet property="durationLabel" destination="4uh-4d-GHz" id="eeS-VX-GQE"/>
@@ -382,6 +392,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="big-like" width="256" height="256"/>
         <image name="flecha_blanca" width="15" height="25"/>
     </resources>
 </document>
