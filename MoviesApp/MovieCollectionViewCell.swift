@@ -12,11 +12,9 @@ import Kingfisher
 class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
     
     
     func initCell(from: Movie) {
-        movieTitle.text = from.title!
         movieImageView.kf.setImage(with: URL(string: from.image!), placeholder: UIImage(named: "popcorn"))
     }
     

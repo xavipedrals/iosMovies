@@ -27,10 +27,19 @@ class AllMoviesViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         setCellWidth()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMovieDetail" {
+            let index = moviesCollectionView.indexPathsForSelectedItems?[0]
+            let movieDetailVC = segue.destination as! MovieDetailViewController
+            movieDetailVC.movie = movies[index!.row]
+        }
+    }
 }
 
 
 extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.movies.count
     }
@@ -44,13 +53,17 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: cellWidth!, height: cellWidth! + 140)
+        return CGSize(width: cellWidth!, height: (cellWidth! * 6 / 4))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToMovieDetail", sender: nil)
     }
     
     func setCellWidth () {
         let flow: UICollectionViewFlowLayout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 2
-        cellWidth = Double(width) - 0.5
+        let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 3
+        cellWidth = Double(width) - 1
     }
 }
 

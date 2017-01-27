@@ -17,7 +17,7 @@ class Movie: NSObject {
     var price: String?
     var duration: String?
     var director: String?
-    var categoty: String?
+    var category: String?
     var categoryId: String?
     var releaseDate: String?
     
@@ -31,10 +31,10 @@ class Movie: NSObject {
         self.image = imageAux.replacingOccurrences(of: auxString, with: "300x300")
         self.summary = json["summary"]["label"].stringValue
         self.price = json["im:price"]["label"].stringValue
-        self.duration = json["link"]["im:duration"].stringValue
-        self.director = json["im:artist"]["lable"].stringValue
-        self.categoty = json["category"]["label"].stringValue
-        self.categoryId = json["category"]["im:id"].stringValue
+        self.duration = json["link"][1]["im:duration"]["label"].stringValue
+        self.director = json["im:artist"]["label"].stringValue
+        self.category = json["category"]["attributes"]["label"].stringValue
+        self.categoryId = json["category"]["attributes"]["im:id"].stringValue
         self.releaseDate = json["im:releaseDate"]["attributes"]["label"].stringValue
     }
 }
