@@ -11,9 +11,18 @@ Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources
 ![rss](https://help.campaignmonitor.com/img/help/RSS-feed-icon.png)
 
 
+<p align="center">
+<img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/itunes/featured-contetn-itunes-icon_2x.jpg" width="32%" margin="auto">
+
+<img src="https://help.campaignmonitor.com/img/help/RSS-feed-icon.png" width="32%" margin="auto">
+</p>
+
+
+
 For this app we will use 3 libraries:
 
 [Alamofire]() To make http calls:
+
 ![Alamofire](https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png)
 
 [Kingfisher]() To download and catch images:
