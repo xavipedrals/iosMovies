@@ -23,7 +23,7 @@
         <scene sceneID="4XV-v2-pWP">
             <objects>
                 <navigationController navigationBarHidden="YES" id="wwR-xt-0tM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pPC-mT-38O">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pPC-mT-38O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
