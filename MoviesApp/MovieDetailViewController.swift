@@ -28,9 +28,14 @@ class MovieDetailViewController: UIViewController {
         movieImageView.kf.setImage(with: URL(string: movie!.image!), placeholder: UIImage(named: "popcorn"))
         movieTitleLabel.text = movie!.title!.uppercased()
         priceLabel.text = movie!.price!
-        categoryLabel.text = categoryLabel.text! + " " + movie!.category!
-        directorLabel.text = directorLabel.text! + " " + movie!.director!
-        durationLabel.text = durationLabel.text! + " " + movie!.duration!
+//        categoryLabel.text = categoryLabel.text! + " " + movie!.category!
+        
+        let categoryStr = getLightPlusRegularString(light: categoryLabel.text! + "  ", regular: movie!.category!)
+        let directorStr = getLightPlusRegularString(light: directorLabel.text! + "  ", regular: movie!.director!)
+        let durationStr = getLightPlusRegularString(light: durationLabel.text! + "  ", regular: movie!.duration!)
+        categoryLabel.attributedText = categoryStr
+        directorLabel.attributedText = directorStr
+        durationLabel.attributedText = durationStr
         summaryLabel.text = movie!.summary!
         configDoubleTapGestureRecognizer()
     }
@@ -44,6 +49,18 @@ class MovieDetailViewController: UIViewController {
     
     func doubleTapped() {
         BigLikeAnimation.start(likeView: self.bigLikeImageView)
+    }
+    
+    func getLightPlusRegularString(light: String, regular: String) -> NSAttributedString {
+        let lightAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Light", size: 17.0)! ]
+        let lightString = NSMutableAttributedString(string: light, attributes: lightAttribute )
+        
+        let regularAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Regular", size: 17.0)! ]
+        let regularString = NSMutableAttributedString(string: regular, attributes: regularAttribute )
+        
+        lightString.append(regularString)
+        
+        return lightString
     }
 
     @IBAction func backPressed(_ sender: Any) {
