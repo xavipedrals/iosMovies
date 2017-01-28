@@ -1,15 +1,11 @@
-# Music app 
+# iOS Movies
 
-This app will show you the last top albums released by using the itunes RSS feed.
+This app will show you the last top movies released by using the itunes RSS feed.
 
 The url is https://itunes.apple.com/us/rss/topalbums/limit=10/json
 or https://itunes.apple.com/us/rss/topmovies/limit=10/json
 
 Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources/blog/introduction-rss-feed-generator/
-
-![itunes](https://support.apple.com/content/dam/edam/applecare/images/en_US/itunes/featured-contetn-itunes-icon_2x.jpg)
-![rss](https://help.campaignmonitor.com/img/help/RSS-feed-icon.png)
-
 
 <p align="center">
 <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/itunes/featured-contetn-itunes-icon_2x.jpg" width="32%" margin="auto">
@@ -18,18 +14,26 @@ Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources
 </p>
 
 
-
 For this app we will use 3 libraries:
 
 [Alamofire]() To make http calls:
 
-![Alamofire](https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png" width="32%" margin="auto">
+</p>
 
 [Kingfisher]() To download and catch images:
-![Kingfisher](https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png)
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png" width="32%" margin="auto">
+</p>
 
 [SwiftyJSON]() To work with JSONs in an easy way:
-![SwiftyJSON](https://www.percona.com/sites/default/files/json-logo.png)
+
+<p align="center">
+<img src="https://www.percona.com/sites/default/files/json-logo.png" width="32%" margin="auto">
+</p>
+
 ###### NOTE: This isn't the SwiftyJSON Logo, Swifty JSON has no logo :(
 
 To see a beautiful JSON we will use [JSONFormatter](https://jsonformatter.curiousconcept.com)
