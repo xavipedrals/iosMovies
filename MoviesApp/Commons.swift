@@ -14,5 +14,4 @@ class Commons {
     static var color3 = "#F68657"
     static var color4 = "#F6B352"
     
-    
 }

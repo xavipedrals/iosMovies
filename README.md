@@ -67,7 +67,18 @@ Take the file and drop it inside your Xcode Project, ensure the checkbox "Copy i
 
 Then click your Xcode project, go to Build Phases and check if a section called Copy Files exist. If not you can create it by clicking the + button. There add the .framework files you just added to the project.
 
-(Screenshot)
+<p align="center">
+<img src="https://github.com/xavipedrals/iosMovies/blob/master/GithubScreenshots/settings.png" margin="auto">
+</p>
 
 ## Add custom fonts
 To add custom fonts simply drop them into the project. Then go to your info.plist file and add a section named "Fonts provided by application", there add the fonts you want to use. You need the specify the font path and extension.
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/xavipedrals/iosMovies/master/GithubScreenshots/fonts-infoplist.png" margin="auto">
+</p>
+
+
+
+

@@ -23,7 +23,7 @@
         <scene sceneID="4XV-v2-pWP">
             <objects>
                 <navigationController navigationBarHidden="YES" id="wwR-xt-0tM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pPC-mT-38O">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pPC-mT-38O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -68,7 +68,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.70196078431372544" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6Ah-ew-Gnv" secondAttribute="bottom" id="2cK-L1-fYE"/>
                                     <constraint firstItem="6Ah-ew-Gnv" firstAttribute="leading" secondItem="c0R-rG-Qjm" secondAttribute="leading" id="JUj-yh-WkH"/>
@@ -199,7 +199,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96470588239999999" green="0.70196078429999997" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="soK-pw-8DK" secondAttribute="bottom" id="76M-r7-Pxm"/>
                                     <constraint firstItem="soK-pw-8DK" firstAttribute="leading" secondItem="jeB-0w-P4r" secondAttribute="leading" id="Gem-1x-HZE"/>
@@ -226,8 +226,8 @@
                                                         <rect key="frame" x="172" y="0.0" width="172" height="258"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVIE TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jn-AJ-8fG">
-                                                                <rect key="frame" x="10" y="0.0" width="152" height="21.5"/>
-                                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                                                                <rect key="frame" x="10" y="0.0" width="152" height="22.5"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -237,7 +237,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.00$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-q0-fzM">
                                                                         <rect key="frame" x="10" y="25" width="50" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                                                        <color key="textColor" red="0.94509803920000002" green="0.5450980392" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" red="0.96078431372549022" green="0.74509803921568629" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -253,7 +253,7 @@
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" red="0.94509803920000002" green="0.5450980392" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="value" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="35"/>
