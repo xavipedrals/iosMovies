@@ -26,8 +26,15 @@ class AllMoviesViewController: UIViewController {
         isDataRefreshing = true
         NetworkController.getMovies(offset: offset) {
             movies in
+            
+//            self.moviesCollectionView.reloadData()
+            var indexPaths = [IndexPath]()
+            for i in self.movies.count ..< (movies.count + self.movies.count) {
+                indexPaths.append(IndexPath(row: i, section: 0))
+            }
             self.movies.append(contentsOf: movies)
-            self.moviesCollectionView.reloadData()
+            self.moviesCollectionView.insertItems(at: indexPaths)
+            
             self.isDataRefreshing = false
         }
     }
@@ -75,15 +82,14 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view.endEditing(true)
-        
         let offset = scrollView.contentOffset
         let bounds = scrollView.bounds
         let size = scrollView.contentSize
         let inset = scrollView.contentInset
         let y = offset.y + bounds.size.height - inset.bottom
         let h = size.height
-        let reloadDistance = 15
+        let reloadDistance = 30
+        
         if y > h + CGFloat(reloadDistance) && !isDataRefreshing {
             getMovies(offset: movies.count)
         }
