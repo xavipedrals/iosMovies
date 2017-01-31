@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class NetworkController {
     
-    private static var getMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/json"
+    private static var getMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/genre=4402/json"
     
     
     static func getOffsetUrl(offset: Int) -> String {

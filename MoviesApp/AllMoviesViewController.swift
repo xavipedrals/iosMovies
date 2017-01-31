@@ -75,6 +75,18 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         self.performSegue(withIdentifier: "goToMovieDetail", sender: nil)
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionElementKindSectionHeader {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "moviesHeader", for: indexPath)
+            return header
+        }
+        else {
+            return UICollectionReusableView()
+        }
+        
+    }
+    
     func setCellWidth () {
         let flow: UICollectionViewFlowLayout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 3

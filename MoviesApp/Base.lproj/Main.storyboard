@@ -81,13 +81,13 @@
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="JuB-Pe-ozm">
                                     <size key="itemSize" width="169" height="248"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="55"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="O3o-ug-Y75" customClass="MovieCollectionViewCell" customModule="MoviesApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="169" height="248"/>
+                                        <rect key="frame" x="0.0" y="55" width="169" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="169" height="248"/>
@@ -122,6 +122,39 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="moviesHeader" id="8hX-Hp-Nuv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-yC-rdc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-JP-Rgo">
+                                                    <rect key="frame" x="20" y="13.5" width="335" height="29"/>
+                                                    <segments>
+                                                        <segment title="All"/>
+                                                        <segment title="Thriller"/>
+                                                        <segment title="Action"/>
+                                                        <segment title="Anime"/>
+                                                    </segments>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="OK6-JP-Rgo" secondAttribute="trailing" constant="20" id="JN1-0r-9Tn"/>
+                                                <constraint firstItem="OK6-JP-Rgo" firstAttribute="leading" secondItem="ue9-yC-rdc" secondAttribute="leading" constant="20" id="fDS-ml-ib1"/>
+                                                <constraint firstItem="OK6-JP-Rgo" firstAttribute="centerY" secondItem="ue9-yC-rdc" secondAttribute="centerY" id="xKT-HF-mTK"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ue9-yC-rdc" firstAttribute="top" secondItem="8hX-Hp-Nuv" secondAttribute="top" id="gfB-DL-xTc"/>
+                                        <constraint firstAttribute="trailing" secondItem="ue9-yC-rdc" secondAttribute="trailing" id="j0J-eO-ge4"/>
+                                        <constraint firstAttribute="bottom" secondItem="ue9-yC-rdc" secondAttribute="bottom" id="nlY-07-2VD"/>
+                                        <constraint firstItem="ue9-yC-rdc" firstAttribute="leading" secondItem="8hX-Hp-Nuv" secondAttribute="leading" id="ptP-KI-A6e"/>
+                                    </constraints>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="LiE-UR-aG0" id="uCC-QO-OrA"/>
                                     <outlet property="delegate" destination="LiE-UR-aG0" id="z9C-iw-At8"/>
