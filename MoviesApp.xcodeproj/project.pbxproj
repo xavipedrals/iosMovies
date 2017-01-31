@@ -25,6 +25,7 @@
 		08284A071E3A409A003479C0 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 082849F91E3A3EEA003479C0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08284A091E3A4521003479C0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08284A081E3A4521003479C0 /* Movie.swift */; };
 		08284A0B1E3A4D0E003479C0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */; };
+		08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */; };
 		47E0FEEA1E3BC1C800F7011A /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 47E0FEE91E3BC1C800F7011A /* Montserrat */; };
 		47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */; };
 		47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */; };
@@ -86,6 +87,7 @@
 		08284A021E3A3F28003479C0 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		08284A081E3A4521003479C0 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		47E0FEE91E3BC1C800F7011A /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */,
 				082849C81E3A34A1003479C0 /* AppDelegate.swift */,
 				082849D41E3A34A1003479C0 /* Info.plist */,
+				08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08284A031E3A3F28003479C0 /* NetworkController.swift in Sources */,
+				08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */,
 				47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */,
 				47E0FEF11E3BD01100F7011A /* CustomButton.swift in Sources */,
 				082849CB1E3A34A1003479C0 /* AllMoviesViewController.swift in Sources */,
