@@ -12,10 +12,20 @@ import SwiftyJSON
 
 class NetworkController {
     
-    private static var getAllMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=50/json"
+    private static var getMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/json"
     
-    static func getAllMovies(completion: @escaping (_ movies: [Movie]) -> Void) {
-        Alamofire.request(getAllMoviesUrl).responseJSON {
+    
+    static func getOffsetUrl(offset: Int) -> String {
+        let limit = offset + 30
+        let url = getMoviesUrl.replacingOccurrences(of: "30", with: String(limit))
+        return url
+    }
+    
+    static func getMovies(offset: Int, completion: @escaping (_ movies: [Movie]) -> Void) {
+        
+        let moviesUrl = getOffsetUrl(offset: offset)
+        
+        Alamofire.request(moviesUrl).responseJSON {
             response in
             
             switch response.result {
@@ -26,7 +36,8 @@ class NetworkController {
                 
                 var movies = [Movie]()
                 
-                for movie in entries {
+                for i in offset..<entries.count {
+                    let movie = entries[i]
                     let newMovie = Movie(json: movie)
                     movies.append(newMovie)
                 }

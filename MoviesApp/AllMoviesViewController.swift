@@ -13,14 +13,22 @@ class AllMoviesViewController: UIViewController {
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     var movies: [Movie]!
     var cellWidth: Double?
+    var isDataRefreshing: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         movies = [Movie]()
-        NetworkController.getAllMovies() {
+        isDataRefreshing = false
+        getMovies(offset: 0)
+    }
+    
+    func getMovies(offset: Int) {
+        isDataRefreshing = true
+        NetworkController.getMovies(offset: offset) {
             movies in
-            self.movies = movies
+            self.movies.append(contentsOf: movies)
             self.moviesCollectionView.reloadData()
+            self.isDataRefreshing = false
         }
     }
     
@@ -64,6 +72,21 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         let flow: UICollectionViewFlowLayout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 3
         cellWidth = Double(width) - 1
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+        
+        let offset = scrollView.contentOffset
+        let bounds = scrollView.bounds
+        let size = scrollView.contentSize
+        let inset = scrollView.contentInset
+        let y = offset.y + bounds.size.height - inset.bottom
+        let h = size.height
+        let reloadDistance = 15
+        if y > h + CGFloat(reloadDistance) && !isDataRefreshing {
+            getMovies(offset: movies.count)
+        }
     }
 }
 
