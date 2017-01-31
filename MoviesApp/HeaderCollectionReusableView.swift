@@ -22,7 +22,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         case 0:
             delegate?.switchToAllMovies()
         case 1:
-            delegate?.switchToMoviesWith(genre: .thriller)
+            delegate?.switchToMoviesWith(genre: .scifi)
             break
         case 2:
             delegate?.switchToMoviesWith(genre: .action)

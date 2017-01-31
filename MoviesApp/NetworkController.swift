@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 enum MovieGenre {
-    case thriller
+    case scifi
     case action
     case anime
 }
@@ -22,7 +22,7 @@ class NetworkController {
     private static var getMoviesWithGenreUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/genre=4401/json"
     private static var actionGenre = "4401"
     private static var animeGenre = "4402"
-    private static var thrillerGenre = "4416"
+    private static var scifiGenre = "4413"
     
     
     static func getUrlWith(offset: Int, url: String) -> String {
@@ -64,8 +64,8 @@ class NetworkController {
     
     static func getUrlWith(genre: MovieGenre, url: String) -> String {
         switch genre {
-        case .thriller:
-            let finalUrl = url.replacingOccurrences(of: "4401", with: thrillerGenre)
+        case .scifi:
+            let finalUrl = url.replacingOccurrences(of: "4401", with: scifiGenre)
             return finalUrl
         case .anime:
             let finalUrl = url.replacingOccurrences(of: "4401", with: animeGenre)
