@@ -194,7 +194,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VC8-hf-T95"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WgO-hb-C7o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="815"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeB-0w-P4r" userLabel="Toolbar">
@@ -244,10 +244,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nco-1L-aP8">
-                                <rect key="frame" x="0.0" y="66" width="375" height="474"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="749"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1g-Oh-Ae6">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="753.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-Qy-LN6">
                                                 <rect key="frame" x="8" y="24" width="344" height="258"/>
@@ -351,40 +351,52 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-Ud-fyk">
-                                                <rect key="frame" x="10" y="421.5" width="355" height="18"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-JB-cij" userLabel="Separator">
-                                                <rect key="frame" x="10" y="405.5" width="355" height="1"/>
+                                                <rect key="frame" x="10" y="405" width="355" height="1"/>
                                                 <color key="backgroundColor" red="0.21960784310000001" green="0.2274509804" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="oUX-9r-sTL"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-7S-hw4">
+                                                <rect key="frame" x="10" y="421" width="355" height="311"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA7-9d-6hH" userLabel="Summary Title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-Ud-fyk">
+                                                        <rect key="frame" x="0.0" y="27.5" width="355" height="283.5"/>
+                                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam dui. Mauris pulvinar neque sapien, ut sagittis felis lobortis pharetra. Nunc iaculis tristique lorem eu dictum. Suspendisse eget felis a mauris condimentum condimentum. Praesent dapibus commodo tortor, et aliquet nulla rutrum vel. Mauris rhoncus, dolor id molestie placerat, ligula eros pellentesque neque, id lacinia leo mi a orci. Nullam eleifend arcu mauris. Nunc iaculis nibh eu efficitur malesuada. Vestibulum ac laoreet lorem, vitae interdum eros. Aenean convallis placerat hendrerit. Nullam nec vehicula elit, nec auctor lectus. Mauris id porttitor magna. Etiam gravida nisl id ornare tristique. Mauris gravida congue finibus. Nullam quam eros, sodales eget diam ac, auctor accumsan lorem. Nullam ullamcorper lorem lectus.</mutableString>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="fF8-JB-cij" firstAttribute="top" secondItem="BUF-9L-7MA" secondAttribute="bottom" constant="15" id="1jr-WW-1Hl"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rsf-Ud-fyk" secondAttribute="trailing" constant="10" id="4CR-UJ-oIM"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rg8-7S-hw4" secondAttribute="bottom" constant="21" id="8IX-ts-qyH"/>
                                             <constraint firstItem="RBL-B1-xr5" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="C0S-I0-cfN"/>
                                             <constraint firstItem="RBL-B1-xr5" firstAttribute="top" secondItem="ekY-Qy-LN6" secondAttribute="bottom" constant="15" id="Cr8-ry-jXr"/>
-                                            <constraint firstAttribute="bottom" secondItem="Rsf-Ud-fyk" secondAttribute="bottom" constant="34.5" id="DVg-BR-abx"/>
                                             <constraint firstAttribute="trailing" secondItem="RBL-B1-xr5" secondAttribute="trailing" constant="10" id="K0Z-wy-8MU"/>
                                             <constraint firstItem="LbQ-PB-X1w" firstAttribute="centerY" secondItem="cea-uG-7F9" secondAttribute="centerY" id="QzL-fr-g3M"/>
                                             <constraint firstAttribute="trailing" secondItem="fF8-JB-cij" secondAttribute="trailing" constant="10" id="ZsA-We-CMm"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rg8-7S-hw4" secondAttribute="trailing" constant="10" id="hR2-Jw-VyV"/>
                                             <constraint firstItem="fF8-JB-cij" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="jen-TZ-hwF"/>
-                                            <constraint firstItem="Rsf-Ud-fyk" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="mLU-dj-1FD"/>
                                             <constraint firstItem="ekY-Qy-LN6" firstAttribute="top" secondItem="d1g-Oh-Ae6" secondAttribute="top" constant="24" id="o6t-7n-fWi"/>
+                                            <constraint firstItem="Rg8-7S-hw4" firstAttribute="top" secondItem="fF8-JB-cij" secondAttribute="bottom" constant="15" id="tXL-hb-5Nq"/>
                                             <constraint firstItem="BUF-9L-7MA" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="tha-AU-v5I"/>
                                             <constraint firstItem="LbQ-PB-X1w" firstAttribute="centerX" secondItem="cea-uG-7F9" secondAttribute="centerX" id="uSn-60-Jvm"/>
                                             <constraint firstItem="BUF-9L-7MA" firstAttribute="top" secondItem="RBL-B1-xr5" secondAttribute="bottom" constant="15" id="ubc-e0-Cf1"/>
+                                            <constraint firstItem="Rg8-7S-hw4" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="10" id="vcu-eH-dP8"/>
                                             <constraint firstItem="ekY-Qy-LN6" firstAttribute="leading" secondItem="d1g-Oh-Ae6" secondAttribute="leading" constant="8" id="w5I-oi-aZO"/>
                                             <constraint firstAttribute="trailing" secondItem="ekY-Qy-LN6" secondAttribute="trailing" constant="23" id="wPd-kC-cLa"/>
                                             <constraint firstAttribute="trailing" secondItem="BUF-9L-7MA" secondAttribute="trailing" constant="10" id="xj7-Nz-Js5"/>
-                                            <constraint firstItem="Rsf-Ud-fyk" firstAttribute="top" secondItem="fF8-JB-cij" secondAttribute="bottom" constant="15" id="zdy-ow-0xx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -410,7 +422,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="540"/>
+                    <size key="freeformSize" width="375" height="815"/>
                     <connections>
                         <outlet property="bigLikeImageView" destination="LbQ-PB-X1w" id="Rf5-nR-S5L"/>
                         <outlet property="categoryLabel" destination="MRI-4t-XEF" id="nLN-Zv-dNC"/>
