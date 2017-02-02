@@ -25,6 +25,7 @@
 		08284A091E3A4521003479C0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08284A081E3A4521003479C0 /* Movie.swift */; };
 		08284A0B1E3A4D0E003479C0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */; };
 		08DA5ECB1E436F8A007BA0A1 /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */; };
+		08DA5ECE1E437C0D007BA0A1 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECD1E437C0D007BA0A1 /* APITest.swift */; };
 		08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */; };
 		47E0FEEA1E3BC1C800F7011A /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 47E0FEE91E3BC1C800F7011A /* Montserrat */; };
 		47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */; };
@@ -86,6 +87,7 @@
 		08284A081E3A4521003479C0 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
+		08DA5ECD1E437C0D007BA0A1 /* APITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 		08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		47E0FEE91E3BC1C800F7011A /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				082849DD1E3A34A2003479C0 /* MoviesAppTests.swift */,
+				08DA5ECD1E437C0D007BA0A1 /* APITest.swift */,
 				082849DF1E3A34A2003479C0 /* Info.plist */,
 			);
 			path = MoviesAppTests;
@@ -379,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DA5ECE1E437C0D007BA0A1 /* APITest.swift in Sources */,
 				082849DE1E3A34A2003479C0 /* MoviesAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
