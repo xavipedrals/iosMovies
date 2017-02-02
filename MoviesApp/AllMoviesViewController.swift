@@ -95,6 +95,7 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         if kind == UICollectionElementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "moviesHeader", for: indexPath) as! HeaderCollectionReusableView
             header.delegate = self
+            header.initSegment()
             return header
         }
         else {

@@ -16,6 +16,14 @@ protocol MoviesUpdater {
 class HeaderCollectionReusableView: UICollectionReusableView {
     
     var delegate: MoviesUpdater?
+    @IBOutlet weak var genreSegmentedControl: CustomSegment!
+    
+    
+    func initSegment() {
+        let font = UIFont(name: "Montserrat-Light", size: 13.0)
+        genreSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font!], for: .normal)
+        
+    }
     
     @IBAction func changedSection(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

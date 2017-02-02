@@ -1,14 +1,14 @@
 //
-//  CustomButton.swift
+//  CustomSegment.swift
 //  MoviesApp
 //
-//  Created by Xavi on 27/01/2017.
+//  Created by jedi17 on 2/2/17.
 //  Copyright © 2017 jedi. All rights reserved.
 //
-
 import UIKit
 
-class CustomButton: UIButton {
+@IBDesignable
+class CustomSegment: UISegmentedControl {
     
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
@@ -16,11 +16,13 @@ class CustomButton: UIButton {
             layer.masksToBounds = cornerRadius > 0
         }
     }
+    
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
+    
     @IBInspectable var borderColor: UIColor? {
         didSet {
             layer.borderColor = borderColor?.cgColor

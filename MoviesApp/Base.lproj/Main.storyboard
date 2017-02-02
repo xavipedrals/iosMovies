@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -129,7 +128,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-yC-rdc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-JP-Rgo">
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OK6-JP-Rgo" customClass="CustomSegment" customModule="MoviesApp" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="13.5" width="335" height="29"/>
                                                     <segments>
                                                         <segment title="All"/>
@@ -138,6 +137,17 @@
                                                         <segment title="Anime"/>
                                                     </segments>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="changedSection:" destination="8hX-Hp-Nuv" eventType="valueChanged" id="YbL-jr-8wH"/>
                                                     </connections>
@@ -157,6 +167,9 @@
                                         <constraint firstAttribute="bottom" secondItem="ue9-yC-rdc" secondAttribute="bottom" id="nlY-07-2VD"/>
                                         <constraint firstItem="ue9-yC-rdc" firstAttribute="leading" secondItem="8hX-Hp-Nuv" secondAttribute="leading" id="ptP-KI-A6e"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="genreSegmentedControl" destination="OK6-JP-Rgo" id="CjD-3n-1p9"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="LiE-UR-aG0" id="uCC-QO-OrA"/>
@@ -343,7 +356,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uh-4d-GHz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uh-4d-GHz">
                                                         <rect key="frame" x="0.0" y="55" width="355" height="22.5"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,7 +382,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-Ud-fyk">
                                                         <rect key="frame" x="0.0" y="27.5" width="355" height="283.5"/>
-                                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam dui. Mauris pulvinar neque sapien, ut sagittis felis lobortis pharetra. Nunc iaculis tristique lorem eu dictum. Suspendisse eget felis a mauris condimentum condimentum. Praesent dapibus commodo tortor, et aliquet nulla rutrum vel. Mauris rhoncus, dolor id molestie placerat, ligula eros pellentesque neque, id lacinia leo mi a orci. Nullam eleifend arcu mauris. Nunc iaculis nibh eu efficitur malesuada. Vestibulum ac laoreet lorem, vitae interdum eros. Aenean convallis placerat hendrerit. Nullam nec vehicula elit, nec auctor lectus. Mauris id porttitor magna. Etiam gravida nisl id ornare tristique. Mauris gravida congue finibus. Nullam quam eros, sodales eget diam ac, auctor accumsan lorem. Nullam ullamcorper lorem lectus.</mutableString>
+                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed quam dui. Mauris pulvinar neque sapien, ut sagittis felis lobortis pharetra. Nunc iaculis tristique lorem eu dictum. Suspendisse eget felis a mauris condimentum condimentum. Praesent dapibus commodo tortor, et aliquet nulla rutrum vel. Mauris rhoncus, dolor id molestie placerat, ligula eros pellentesque neque, id lacinia leo mi a orci. Nullam eleifend arcu mauris. Nunc iaculis nibh eu efficitur malesuada. Vestibulum ac laoreet lorem, vitae interdum eros. Aenean convallis placerat hendrerit. Nullam nec vehicula elit, nec auctor lectus. Mauris id porttitor magna. Etiam gravida nisl id ornare tristique. Mauris gravida congue finibus. Nullam quam eros, sodales eget diam ac, auctor accumsan lorem. Nullam ullamcorper lorem lectus.</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -427,10 +440,10 @@
                         <outlet property="bigLikeImageView" destination="LbQ-PB-X1w" id="Rf5-nR-S5L"/>
                         <outlet property="categoryLabel" destination="MRI-4t-XEF" id="nLN-Zv-dNC"/>
                         <outlet property="directorLabel" destination="ysx-R4-Bh6" id="lIo-k0-ab0"/>
-                        <outlet property="durationLabel" destination="4uh-4d-GHz" id="eeS-VX-GQE"/>
                         <outlet property="movieImageView" destination="cea-uG-7F9" id="taO-yy-ZCA"/>
                         <outlet property="movieTitleLabel" destination="3jn-AJ-8fG" id="zuV-1r-nMX"/>
                         <outlet property="priceLabel" destination="Kam-q0-fzM" id="fCg-me-ZoA"/>
+                        <outlet property="releasedLabel" destination="4uh-4d-GHz" id="kOf-DL-tCe"/>
                         <outlet property="summaryLabel" destination="Rsf-Ud-fyk" id="Tsr-U6-4Er"/>
                     </connections>
                 </viewController>

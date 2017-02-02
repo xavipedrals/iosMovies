@@ -16,7 +16,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var directorLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var releasedLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var bigLikeImageView: UIImageView!
     
@@ -28,14 +28,13 @@ class MovieDetailViewController: UIViewController {
         movieImageView.kf.setImage(with: URL(string: movie!.image!), placeholder: UIImage(named: "popcorn"))
         movieTitleLabel.text = movie!.title!.uppercased()
         priceLabel.text = movie!.price!
-//        categoryLabel.text = categoryLabel.text! + " " + movie!.category!
         
         let categoryStr = getLightPlusRegularString(light: categoryLabel.text! + "  ", regular: movie!.category!)
         let directorStr = getLightPlusRegularString(light: directorLabel.text! + "  ", regular: movie!.director!)
-        let durationStr = getLightPlusRegularString(light: durationLabel.text! + "  ", regular: movie!.duration!)
+        let releasedStr = getLightPlusRegularString(light: releasedLabel.text! + "  ", regular: movie!.releaseDate!)
         categoryLabel.attributedText = categoryStr
         directorLabel.attributedText = directorStr
-        durationLabel.attributedText = durationStr
+        releasedLabel.attributedText = releasedStr
         summaryLabel.text = movie!.summary!
         configDoubleTapGestureRecognizer()
     }
