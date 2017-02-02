@@ -77,10 +77,3 @@ class BigLikeAnimation: LikeAnimation {
     }
 }
 
-class SmallLikeAnimation: LikeAnimation {
-    static func fadeOut(likeView: UIImageView) {
-        UIView.animate(withDuration: 0.15, animations: {
-            likeView.transform = normalTransform
-        })
-    }
-}

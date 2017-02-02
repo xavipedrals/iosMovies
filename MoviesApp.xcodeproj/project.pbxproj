@@ -15,7 +15,6 @@
 		082849D31E3A34A1003479C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082849D11E3A34A1003479C0 /* LaunchScreen.storyboard */; };
 		082849DE1E3A34A2003479C0 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082849DD1E3A34A2003479C0 /* MoviesAppTests.swift */; };
 		082849E91E3A34A2003479C0 /* MoviesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082849E81E3A34A2003479C0 /* MoviesAppUITests.swift */; };
-		082849F71E3A39C6003479C0 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082849F61E3A39C6003479C0 /* Commons.swift */; };
 		082849FA1E3A3EEA003479C0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082849F91E3A3EEA003479C0 /* Alamofire.framework */; };
 		082849FC1E3A3EF3003479C0 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082849FB1E3A3EF3003479C0 /* Kingfisher.framework */; };
 		082849FE1E3A3EFA003479C0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082849FD1E3A3EFA003479C0 /* SwiftyJSON.framework */; };
@@ -30,7 +29,6 @@
 		47E0FEEA1E3BC1C800F7011A /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 47E0FEE91E3BC1C800F7011A /* Montserrat */; };
 		47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */; };
 		47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */; };
-		47E0FEF11E3BD01100F7011A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEF01E3BD01100F7011A /* CustomButton.swift */; };
 		47E0FEF31E3BDCC300F7011A /* LikeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +79,6 @@
 		082849E41E3A34A2003479C0 /* MoviesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		082849E81E3A34A2003479C0 /* MoviesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppUITests.swift; sourceTree = "<group>"; };
 		082849EA1E3A34A2003479C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		082849F61E3A39C6003479C0 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		082849F91E3A3EEA003479C0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		082849FB1E3A3EF3003479C0 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		082849FD1E3A3EFA003479C0 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -93,7 +90,6 @@
 		47E0FEE91E3BC1C800F7011A /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		47E0FEF01E3BD01100F7011A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,13 +146,12 @@
 		082849C71E3A34A1003479C0 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
-				47E0FEED1E3BCFBB00F7011A /* Utils */,
 				47E0FEF41E3BDD7200F7011A /* Assets */,
+				47E0FEED1E3BCFBB00F7011A /* Utils */,
+				08DA5ECC1E437677007BA0A1 /* Model */,
 				082849D11E3A34A1003479C0 /* LaunchScreen.storyboard */,
 				082849CC1E3A34A1003479C0 /* Main.storyboard */,
-				08284A021E3A3F28003479C0 /* NetworkController.swift */,
 				082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */,
-				08284A081E3A4521003479C0 /* Movie.swift */,
 				08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */,
 				47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */,
 				082849C81E3A34A1003479C0 /* AppDelegate.swift */,
@@ -194,6 +189,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		08DA5ECC1E437677007BA0A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08284A081E3A4521003479C0 /* Movie.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		47E0FEE81E3BC16800F7011A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,9 +208,8 @@
 		47E0FEED1E3BCFBB00F7011A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				082849F61E3A39C6003479C0 /* Commons.swift */,
+				08284A021E3A3F28003479C0 /* NetworkController.swift */,
 				47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */,
-				47E0FEF01E3BD01100F7011A /* CustomButton.swift */,
 				47E0FEF21E3BDCC300F7011A /* LikeAnimations.swift */,
 				08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */,
 			);
@@ -363,9 +365,7 @@
 				08284A031E3A3F28003479C0 /* NetworkController.swift in Sources */,
 				08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */,
 				47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */,
-				47E0FEF11E3BD01100F7011A /* CustomButton.swift in Sources */,
 				082849CB1E3A34A1003479C0 /* AllMoviesViewController.swift in Sources */,
-				082849F71E3A39C6003479C0 /* Commons.swift in Sources */,
 				08284A0B1E3A4D0E003479C0 /* MovieCollectionViewCell.swift in Sources */,
 				47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */,
 				08DA5ECB1E436F8A007BA0A1 /* CustomSegment.swift in Sources */,
