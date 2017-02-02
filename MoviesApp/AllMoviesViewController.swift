@@ -116,9 +116,9 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         let inset = scrollView.contentInset
         let y = offset.y + bounds.size.height - inset.bottom
         let h = size.height
-        let reloadDistance = 60
+        let reloadDistance = 100
         
-        if y > h + CGFloat(reloadDistance) && !isDataRefreshing {
+        if y > h - CGFloat(reloadDistance) && !isDataRefreshing {
             if currentGenre != nil {
                 getMovies(offset: movies.count, genre: currentGenre!)
             }
