@@ -2,7 +2,7 @@
 
 This app will show you the last top movies released by using the itunes RSS feed.
 
-The url of the itunes RSS is https://itunes.apple.com/us/rss/topmovies/limit=10/json
+The url of the itunes RSS is https://itunes.apple.com/us/rss/topmovies/limit=30/json
 
 Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources/blog/introduction-rss-feed-generator/
 
@@ -12,6 +12,15 @@ Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources
 <img src="https://help.campaignmonitor.com/img/help/RSS-feed-icon.png" width="20%" margin="auto">
 </p>
 
+## Screenshots
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/xavipedrals/iosMovies/master/GithubScreenshots/Simulator%20Screen%20Shot%203%20Feb%202017%2C%2017.30.49.png" width="40%" margin="auto">
+
+<img src="https://raw.githubusercontent.com/xavipedrals/iosMovies/master/GithubScreenshots/Simulator%20Screen%20Shot%203%20Feb%202017%2C%2017.31.02.png" width="40%" margin="auto">
+</p>
+
+## Libraries
 
 For this app we will use 3 Swift libraries:
 
