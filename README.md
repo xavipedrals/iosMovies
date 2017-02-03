@@ -7,9 +7,7 @@ The url of the itunes RSS is https://itunes.apple.com/us/rss/topmovies/limit=30/
 Find a gide of itunes RSS urls here https://affiliate.itunes.apple.com/resources/blog/introduction-rss-feed-generator/
 
 <p align="center">
-<img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/itunes/featured-contetn-itunes-icon_2x.jpg" width="20%" margin="auto">
-
-<img src="https://help.campaignmonitor.com/img/help/RSS-feed-icon.png" width="20%" margin="auto">
+<img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/itunes/featured-contetn-itunes-icon_2x.jpg" width="14%" margin="auto">
 </p>
 
 ## Screenshots
