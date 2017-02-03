@@ -76,7 +76,7 @@ To add custom fonts simply drop them into the project. Then go to your info.plis
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/xavipedrals/iosMovies/master/GithubScreenshots/fonts-infoplist.png" margin="auto">
+<img src="https://raw.githubusercontent.com/xavipedrals/iosMovies/master/GithubScreenshots/fonts-infoplist.png" margin="auto"> 
 </p>
 
 
