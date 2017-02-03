@@ -51,10 +51,10 @@ class MovieDetailViewController: UIViewController {
     }
     
     func getLightPlusRegularString(light: String, regular: String) -> NSAttributedString {
-        let lightAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Light", size: 17.0)! ]
+        let lightAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Light", size: 15.0)! ]
         let lightString = NSMutableAttributedString(string: light, attributes: lightAttribute )
         
-        let regularAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Regular", size: 17.0)! ]
+        let regularAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Regular", size: 15.0)! ]
         let regularString = NSMutableAttributedString(string: regular, attributes: regularAttribute )
         
         lightString.append(regularString)

@@ -14,22 +14,14 @@ class AllMoviesViewController: UIViewController {
     var movies: [Movie]!
     var cellWidth: Double?
     var isDataRefreshing: Bool!
-    var currentGenre: MovieGenre?
+    var currentGenre: MovieGenre!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         movies = [Movie]()
         isDataRefreshing = false
-        getMovies(offset: 0)
-    }
-    
-    func getMovies(offset: Int) {
-        isDataRefreshing = true
-        NetworkController.getMovies(offset: offset) {
-            movies in
-            
-            self.updateMovies(movies: movies)
-        }
+        currentGenre = .all
+        getMovies(offset: 0, genre: currentGenre)
     }
     
     func getMovies(offset: Int, genre: MovieGenre) {
@@ -42,15 +34,8 @@ class AllMoviesViewController: UIViewController {
     }
     
     func updateMovies(movies: [Movie]) {
-//        var indexPaths = [IndexPath]()
-//        for i in self.movies.count ..< (movies.count + self.movies.count) {
-//            indexPaths.append(IndexPath(row: i, section: 0))
-//        }
-//        self.movies.append(contentsOf: movies)
-//        self.moviesCollectionView.insertItems(at: indexPaths)
         self.movies.append(contentsOf: movies)
         self.moviesCollectionView.reloadData()
-        
         self.isDataRefreshing = false
     }
     
@@ -120,12 +105,7 @@ extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewD
         let reloadDistance = 100
         
         if y > h - CGFloat(reloadDistance) && !isDataRefreshing {
-            if currentGenre != nil {
-                getMovies(offset: movies.count, genre: currentGenre!)
-            }
-            else {
-                getMovies(offset: movies.count)
-            }
+            getMovies(offset: movies.count, genre: currentGenre!)
         }
     }
 }
@@ -136,12 +116,6 @@ extension AllMoviesViewController: MoviesUpdater {
         currentGenre = genre
         movies = [Movie]()
         getMovies(offset: 0, genre: genre)
-    }
-    
-    func switchToAllMovies(){
-        currentGenre = nil
-        movies = [Movie]()
-        getMovies(offset: 0)
     }
 }
 

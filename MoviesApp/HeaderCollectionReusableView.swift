@@ -10,7 +10,6 @@ import UIKit
 
 protocol MoviesUpdater {
     func switchToMoviesWith(genre: MovieGenre)
-    func switchToAllMovies()
 }
 
 class HeaderCollectionReusableView: UICollectionReusableView {
@@ -20,7 +19,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     
     func initSegment() {
-        let font = UIFont(name: "Montserrat-Light", size: 13.0)
+        let font = UIFont(name: "Montserrat-Light", size: 12.0)
         genreSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font!], for: .normal)
         
     }
@@ -28,7 +27,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     @IBAction func changedSection(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            delegate?.switchToAllMovies()
+            delegate?.switchToMoviesWith(genre: .all)
         case 1:
             delegate?.switchToMoviesWith(genre: .scifi)
             break
