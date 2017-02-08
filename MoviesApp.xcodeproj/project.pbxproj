@@ -27,6 +27,8 @@
 		08DA5ECB1E436F8A007BA0A1 /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */; };
 		08DA5ECE1E437C0D007BA0A1 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECD1E437C0D007BA0A1 /* APITest.swift */; };
 		08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */; };
+		47D8CC991E4BCA1F001E5449 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D8CC981E4BCA1F001E5449 /* RxSwift.framework */; };
+		47D8CC9A1E4BCA2E001E5449 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47D8CC981E4BCA1F001E5449 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47E0FEEA1E3BC1C800F7011A /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 47E0FEE91E3BC1C800F7011A /* Montserrat */; };
 		47E0FEEC1E3BC9BB00F7011A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */; };
 		47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */; };
@@ -57,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				47D8CC9A1E4BCA2E001E5449 /* RxSwift.framework in CopyFiles */,
 				08284A051E3A409A003479C0 /* SwiftyJSON.framework in CopyFiles */,
 				08284A061E3A409A003479C0 /* Kingfisher.framework in CopyFiles */,
 				08284A071E3A409A003479C0 /* Alamofire.framework in CopyFiles */,
@@ -89,6 +92,7 @@
 		08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
 		08DA5ECD1E437C0D007BA0A1 /* APITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 		08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		47D8CC981E4BCA1F001E5449 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		47E0FEE91E3BC1C800F7011A /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		47E0FEEE1E3BCFDE00F7011A /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D8CC991E4BCA1F001E5449 /* RxSwift.framework in Frameworks */,
 				082849FC1E3A3EF3003479C0 /* Kingfisher.framework in Frameworks */,
 				082849FA1E3A3EEA003479C0 /* Alamofire.framework in Frameworks */,
 				082849FE1E3A3EFA003479C0 /* SwiftyJSON.framework in Frameworks */,
@@ -185,6 +190,7 @@
 		082849F81E3A3EC5003479C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47D8CC981E4BCA1F001E5449 /* RxSwift.framework */,
 				082849FD1E3A3EFA003479C0 /* SwiftyJSON.framework */,
 				082849FB1E3A3EF3003479C0 /* Kingfisher.framework */,
 				082849F91E3A3EEA003479C0 /* Alamofire.framework */,
