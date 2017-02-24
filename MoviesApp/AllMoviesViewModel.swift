@@ -12,13 +12,16 @@ import RxSwift
 class AllMoviesViewModel {
     
     let movies = Variable<[Movie]>([])
-    var currentGenre: MovieGenre!
+    var currentGenre: MovieGenre! {
+        didSet {
+            getMovies(offset: 0, genre: currentGenre)
+        }
+    }
     var isDataRefreshing: Bool!
     
     init() {
         isDataRefreshing = false
         currentGenre = .all
-        getMovies(offset: 0, genre: currentGenre)
     }
     
     func getMoreMovies() {
@@ -30,7 +33,12 @@ class AllMoviesViewModel {
             isDataRefreshing = true
             NetworkController.getMovies(offset: offset, genre: genre) {
                 movies in
-                self.movies.value.append(contentsOf: movies)
+                if offset == 0 {
+                    self.movies.value = movies
+                }
+                else {
+                    self.movies.value.append(contentsOf: movies)
+                }
                 self.isDataRefreshing = false
             }
         }

@@ -10,18 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
-extension UIScrollView {
-    func  isNearBottomEdge(edgeOffset: CGFloat = 50.0) -> Bool {
-        return self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
-    }
-}
-
 class AllMoviesViewController: UIViewController {
 
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var genreSegmentedControl: CustomSegment!
+    
     let moviesViewModel = AllMoviesViewModel()
     var cellWidth: Double?
+    var selectedMovie: Movie?
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -35,7 +31,7 @@ class AllMoviesViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         
-        self.moviesCollectionView.rx.contentOffset
+        moviesCollectionView.rx.contentOffset
             .flatMap { _ in
                 return self.moviesCollectionView.isNearBottomEdge(edgeOffset: 20.0)
                     ? Observable.just(())
@@ -46,23 +42,49 @@ class AllMoviesViewController: UIViewController {
             })
             .addDisposableTo(disposeBag)
         
+        moviesCollectionView.rx.modelSelected(Movie.self)
+            .subscribe(onNext: {
+                movie in
+                self.selectedMovie = movie
+                self.performSegue(withIdentifier: "goToMovieDetail", sender: nil)
+            })
+            .addDisposableTo(disposeBag)
+        
+        
         
         moviesCollectionView.rx.setDelegate(self)
             .addDisposableTo(disposeBag)
         
     }
     
+    @IBAction func changedSection(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            moviesViewModel.currentGenre = .all
+        case 1:
+            moviesViewModel.currentGenre = .scifi
+            break
+        case 2:
+            moviesViewModel.currentGenre = .action
+            break
+        case 3:
+            moviesViewModel.currentGenre = .anime
+            break
+        default:
+            return
+        }
+    }
+    
     override func viewDidLayoutSubviews() {
         setCellWidth()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToMovieDetail" {
-//            let index = moviesCollectionView.indexPathsForSelectedItems?[0]
-//            let movieDetailVC = segue.destination as! MovieDetailViewController
-//            movieDetailVC.movie = movies[index!.row]
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMovieDetail" {
+            let movieDetailVC = segue.destination as! MovieDetailViewController
+            movieDetailVC.movie = selectedMovie!
+        }
+    }
 }
 
 extension AllMoviesViewController: UICollectionViewDelegateFlowLayout {
@@ -94,25 +116,6 @@ extension AllMoviesViewController: UICollectionViewDelegateFlowLayout {
 
 //extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 //
-//    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "goToMovieDetail", sender: nil)
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        
-//        if kind == UICollectionElementKindSectionHeader {
-//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "moviesHeader", for: indexPath) as! HeaderCollectionReusableView
-//            header.delegate = self
-//            header.initSegment()
-//            return header
-//        }
-//        else {
-//            return UICollectionReusableView()
-//        }
-//        
-//    }
-
 //}
 
 extension AllMoviesViewController: MoviesUpdater {
