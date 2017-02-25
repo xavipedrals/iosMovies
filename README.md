@@ -2,7 +2,7 @@
 
 This app will show you the last top movies released by using the itunes RSS feed.
 
-#####-> You can find a Reactive version of this app coded with RxSwift in this branch [devReactive](https://github.com/xavipedrals/iosMovies/tree/devReactive).
+####-> You can find a Reactive version of this app coded with RxSwift in this branch [devReactive](https://github.com/xavipedrals/iosMovies/tree/devReactive).
 
 The url of the itunes RSS is https://itunes.apple.com/us/rss/topmovies/limit=30/json
 
