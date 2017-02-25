@@ -13,7 +13,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var movieImageView: UIImageView!
     
-    
     func initCell(from: Movie) {
         movieImageView.kf.setImage(with: URL(string: from.image!), placeholder: UIImage(named: "popcorn"))
     }

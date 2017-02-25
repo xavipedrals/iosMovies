@@ -26,7 +26,6 @@
 		08284A0B1E3A4D0E003479C0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */; };
 		08DA5ECB1E436F8A007BA0A1 /* CustomSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */; };
 		08DA5ECE1E437C0D007BA0A1 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA5ECD1E437C0D007BA0A1 /* APITest.swift */; };
-		08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */; };
 		47084BBF1E60D15B00A79D00 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47084BBE1E60D15B00A79D00 /* Commons.swift */; };
 		47D8CC991E4BCA1F001E5449 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D8CC981E4BCA1F001E5449 /* RxSwift.framework */; };
 		47D8CC9A1E4BCA2E001E5449 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47D8CC981E4BCA1F001E5449 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -96,7 +95,6 @@
 		08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		08DA5ECA1E436F8A007BA0A1 /* CustomSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegment.swift; sourceTree = "<group>"; };
 		08DA5ECD1E437C0D007BA0A1 /* APITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
-		08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		47084BBE1E60D15B00A79D00 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		47D8CC981E4BCA1F001E5449 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		47E0FEE91E3BC1C800F7011A /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
@@ -164,15 +162,10 @@
 			children = (
 				47E0FEF41E3BDD7200F7011A /* Assets */,
 				47E0FEED1E3BCFBB00F7011A /* Utils */,
-				08DA5ECC1E437677007BA0A1 /* Model */,
+				470650EB1E6198BD00FB8D90 /* Movies */,
 				082849D11E3A34A1003479C0 /* LaunchScreen.storyboard */,
 				082849CC1E3A34A1003479C0 /* Main.storyboard */,
-				47F00DF11E5F728100AEE0D1 /* AllMoviesViewModel.swift */,
-				082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */,
-				08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */,
-				47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */,
 				082849C81E3A34A1003479C0 /* AppDelegate.swift */,
-				08DDEBF71E40D6EC00C8C663 /* HeaderCollectionReusableView.swift */,
 				082849D41E3A34A1003479C0 /* Info.plist */,
 			);
 			path = MoviesApp;
@@ -209,12 +202,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		08DA5ECC1E437677007BA0A1 /* Model */ = {
+		470650EB1E6198BD00FB8D90 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				082849CA1E3A34A1003479C0 /* AllMoviesViewController.swift */,
+				08284A0A1E3A4D0E003479C0 /* MovieCollectionViewCell.swift */,
+				47F00DF11E5F728100AEE0D1 /* AllMoviesViewModel.swift */,
+				47E0FEEB1E3BC9BB00F7011A /* MovieDetailViewController.swift */,
 				08284A081E3A4521003479C0 /* Movie.swift */,
 			);
-			name = Model;
+			name = Movies;
 			sourceTree = "<group>";
 		};
 		47E0FEE81E3BC16800F7011A /* Fonts */ = {
@@ -384,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08284A031E3A3F28003479C0 /* NetworkController.swift in Sources */,
-				08DDEBF81E40D6EC00C8C663 /* HeaderCollectionReusableView.swift in Sources */,
 				47E0FEEF1E3BCFDE00F7011A /* CustomView.swift in Sources */,
 				082849CB1E3A34A1003479C0 /* AllMoviesViewController.swift in Sources */,
 				47084BBF1E60D15B00A79D00 /* Commons.swift in Sources */,

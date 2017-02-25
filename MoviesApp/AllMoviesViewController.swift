@@ -63,13 +63,10 @@ class AllMoviesViewController: UIViewController {
             moviesViewModel.currentGenre = .all
         case 1:
             moviesViewModel.currentGenre = .scifi
-            break
         case 2:
             moviesViewModel.currentGenre = .action
-            break
         case 3:
             moviesViewModel.currentGenre = .anime
-            break
         default:
             return
         }
@@ -97,33 +94,6 @@ extension AllMoviesViewController: UICollectionViewDelegateFlowLayout {
         let flow: UICollectionViewFlowLayout = moviesCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let width = (moviesCollectionView.frame.size.width - (flow.sectionInset.right + flow.sectionInset.left) * 2) / 3
         cellWidth = Double(width) - 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        if kind == UICollectionElementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "moviesHeader", for: indexPath) as! HeaderCollectionReusableView
-            header.delegate = self
-            header.initSegment()
-            return header
-        }
-        else {
-            return UICollectionReusableView()
-        }
-        
-    }
-}
-
-//extension AllMoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//}
-
-extension AllMoviesViewController: MoviesUpdater {
-    
-    func switchToMoviesWith(genre: MovieGenre) {
-//        currentGenre = genre
-//        movies = [Movie]()
-//        getMovies(offset: 0, genre: genre)
     }
 }
 
