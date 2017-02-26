@@ -12,20 +12,21 @@ import RxSwift
 class AllMoviesViewModel {
     
     let movies = Variable<[Movie]>([])
-    var currentGenre: MovieGenre! {
-        didSet {
-            getMovies(offset: 0, genre: currentGenre)
-        }
-    }
+    let currentGenre = Variable<MovieGenre>(.all)
+    let disposeBag = DisposeBag()
     var isDataRefreshing: Bool!
     
     init() {
         isDataRefreshing = false
-        currentGenre = .all
+        currentGenre.asObservable()
+            .subscribe(onNext: {
+                self.getMovies(offset: 0, genre: $0)
+            })
+            .addDisposableTo(disposeBag)
     }
     
     func getMoreMovies() {
-        getMovies(offset: self.movies.value.count, genre: currentGenre)
+        getMovies(offset: self.movies.value.count, genre: currentGenre.value)
     }
     
     func getMovies(offset: Int, genre: MovieGenre) {

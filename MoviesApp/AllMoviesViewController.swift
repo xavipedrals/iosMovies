@@ -37,6 +37,7 @@ class AllMoviesViewController: UIViewController {
                     ? Observable.just(())
                     : Observable.empty()
             }
+            .throttle(0.25, scheduler: MainScheduler.instance)
             .subscribe(onNext: { _ in
                 self.moviesViewModel.getMoreMovies()
             })
@@ -50,6 +51,11 @@ class AllMoviesViewController: UIViewController {
             })
             .addDisposableTo(disposeBag)
         
+        moviesViewModel.currentGenre.asObservable()
+            .subscribe(onNext: { _ in
+                self.moviesCollectionView.resetScrollPositionToTop()
+            })
+            .addDisposableTo(disposeBag)
         
         
         moviesCollectionView.rx.setDelegate(self)
@@ -60,13 +66,13 @@ class AllMoviesViewController: UIViewController {
     @IBAction func changedSection(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            moviesViewModel.currentGenre = .all
+            moviesViewModel.currentGenre.value = .all
         case 1:
-            moviesViewModel.currentGenre = .scifi
+            moviesViewModel.currentGenre.value = .scifi
         case 2:
-            moviesViewModel.currentGenre = .action
+            moviesViewModel.currentGenre.value = .action
         case 3:
-            moviesViewModel.currentGenre = .anime
+            moviesViewModel.currentGenre.value = .anime
         default:
             return
         }
