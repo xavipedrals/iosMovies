@@ -34,12 +34,10 @@ class AllMoviesViewModel {
             isDataRefreshing = true
             NetworkController.getMovies(offset: offset, genre: genre) {
                 movies in
-                if offset == 0 {
-                    self.movies.value = movies
-                }
-                else {
-                    self.movies.value.append(contentsOf: movies)
-                }
+                offset == 0
+                    ? self.movies.value = movies
+                    : self.movies.value.append(contentsOf: movies)
+
                 self.isDataRefreshing = false
             }
         }
