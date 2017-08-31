@@ -27,7 +27,7 @@ For this app we will use 3 Swift libraries:
 - [Alamofire]() To make http calls:
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png" width="60%" margin="auto">
+<img src="https://raw.githubusercontent.com/Alamofire/Alamofire/master/alamofire.png" width="60%" margin="auto">
 </p>
 
 - [Kingfisher]() To download and catch images:
