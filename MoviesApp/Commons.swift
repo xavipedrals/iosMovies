@@ -16,5 +16,4 @@ extension UIScrollView {
     func resetScrollPositionToTop() {
         self.contentOffset = CGPoint(x: -contentInset.left, y: -contentInset.top)
     }
-
 }

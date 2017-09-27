@@ -45,6 +45,9 @@ extension Kingfisher where Base: NSButton {
      
      - note: Both the `progressBlock` and `completionHandler` will be invoked in main thread.
      The `CallbackDispatchQueue` specified in `optionsInfo` will not be used in callbacks of this method.
+     
+     If `resource` is `nil`, the `placeholder` image will be set and
+     `completionHandler` will be called with both `error` and `image` being `nil`.
      */
     @discardableResult
     public func setImage(with resource: Resource?,
@@ -55,11 +58,12 @@ extension Kingfisher where Base: NSButton {
     {
         guard let resource = resource else {
             base.image = placeholder
+            setWebURL(nil)
             completionHandler?(nil, nil, .none, nil)
             return .empty
         }
         
-        let options = options ?? KingfisherEmptyOptionsInfo
+        let options = KingfisherManager.shared.defaultOptions + (options ?? KingfisherEmptyOptionsInfo)
         if !options.keepCurrentImageWhileLoading {
             base.image = placeholder
         }
@@ -69,6 +73,9 @@ extension Kingfisher where Base: NSButton {
             with: resource,
             options: options,
             progressBlock: { receivedSize, totalSize in
+                guard resource.downloadURL == self.webURL else {
+                    return
+                }
                 if let progressBlock = progressBlock {
                     progressBlock(receivedSize, totalSize)
                 }
@@ -76,9 +83,11 @@ extension Kingfisher where Base: NSButton {
             completionHandler: {[weak base] image, error, cacheType, imageURL in
                 DispatchQueue.main.safeAsync {
                     guard let strongBase = base, imageURL == self.webURL else {
+                        completionHandler?(image, error, cacheType, imageURL)
                         return
                     }
                     self.setImageTask(nil)
+                    
                     if image != nil {
                         strongBase.image = image
                     }
@@ -95,7 +104,7 @@ extension Kingfisher where Base: NSButton {
      Nothing will happen if the downloading has already finished.
      */
     public func cancelImageDownloadTask() {
-        imageTask?.downloadTask?.cancel()
+        imageTask?.cancel()
     }
     
     /**
@@ -111,6 +120,9 @@ extension Kingfisher where Base: NSButton {
      
      - note: Both the `progressBlock` and `completionHandler` will be invoked in main thread.
      The `CallbackDispatchQueue` specified in `optionsInfo` will not be used in callbacks of this method.
+     
+     If `resource` is `nil`, the `placeholder` image will be set and
+     `completionHandler` will be called with both `error` and `image` being `nil`.
      */
     @discardableResult
     public func setAlternateImage(with resource: Resource?,
@@ -121,11 +133,12 @@ extension Kingfisher where Base: NSButton {
     {
         guard let resource = resource else {
             base.alternateImage = placeholder
+            setAlternateWebURL(nil)
             completionHandler?(nil, nil, .none, nil)
             return .empty
         }
         
-        let options = options ?? KingfisherEmptyOptionsInfo
+        let options = KingfisherManager.shared.defaultOptions + (options ?? KingfisherEmptyOptionsInfo)
         if !options.keepCurrentImageWhileLoading {
             base.alternateImage = placeholder
         }
@@ -135,6 +148,9 @@ extension Kingfisher where Base: NSButton {
             with: resource,
             options: options,
             progressBlock: { receivedSize, totalSize in
+                guard resource.downloadURL == self.alternateWebURL else {
+                    return
+                }
                 if let progressBlock = progressBlock {
                     progressBlock(receivedSize, totalSize)
                 }
@@ -142,16 +158,15 @@ extension Kingfisher where Base: NSButton {
             completionHandler: {[weak base] image, error, cacheType, imageURL in
                 DispatchQueue.main.safeAsync {
                     guard let strongBase = base, imageURL == self.alternateWebURL else {
+                        completionHandler?(image, error, cacheType, imageURL)
                         return
                     }
                     self.setAlternateImageTask(nil)
                     
-                    guard let image = image else {
-                        completionHandler?(nil, error, cacheType, imageURL)
-                        return
+                    if image != nil {
+                        strongBase.alternateImage = image
                     }
                     
-                    strongBase.alternateImage = image
                     completionHandler?(image, error, cacheType, imageURL)
                 }
             })
@@ -164,7 +179,7 @@ extension Kingfisher where Base: NSButton {
     /// Cancel the alternate image download task bounded to the image view if it is running. 
     /// Nothing will happen if the downloading has already finished.
     public func cancelAlternateImageDownloadTask() {
-        alternateImageTask?.downloadTask?.cancel()
+        alternateImageTask?.cancel()
     }
 }
 
@@ -182,7 +197,7 @@ extension Kingfisher where Base: NSButton {
         return objc_getAssociatedObject(base, &lastURLKey) as? URL
     }
     
-    fileprivate func setWebURL(_ url: URL) {
+    fileprivate func setWebURL(_ url: URL?) {
         objc_setAssociatedObject(base, &lastURLKey, url, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     
@@ -199,7 +214,7 @@ extension Kingfisher where Base: NSButton {
         return objc_getAssociatedObject(base, &lastAlternateURLKey) as? URL
     }
     
-    fileprivate func setAlternateWebURL(_ url: URL) {
+    fileprivate func setAlternateWebURL(_ url: URL?) {
         objc_setAssociatedObject(base, &lastAlternateURLKey, url, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     

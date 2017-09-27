@@ -46,15 +46,15 @@ class MovieDetailViewController: UIViewController {
         movieImageView.addGestureRecognizer(tap)
     }
     
-    func doubleTapped() {
+    @objc func doubleTapped() {
         BigLikeAnimation.start(likeView: self.bigLikeImageView)
     }
     
     func getLightPlusRegularString(light: String, regular: String) -> NSAttributedString {
-        let lightAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Light", size: 15.0)! ]
+        let lightAttribute = [ NSAttributedStringKey.font: UIFont(name: "Montserrat-Light", size: 15.0)! ]
         let lightString = NSMutableAttributedString(string: light, attributes: lightAttribute )
         
-        let regularAttribute = [ NSFontAttributeName: UIFont(name: "Montserrat-Regular", size: 15.0)! ]
+        let regularAttribute = [ NSAttributedStringKey.font: UIFont(name: "Montserrat-Regular", size: 15.0)! ]
         let regularString = NSMutableAttributedString(string: regular, attributes: regularAttribute )
         
         lightString.append(regularString)
