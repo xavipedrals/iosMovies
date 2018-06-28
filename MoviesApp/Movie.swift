@@ -22,12 +22,9 @@ class Movie: NSObject {
     
     init(json: JSON) {
         self.title = json["title"]["label"].stringValue
-        
-        let imageAux = json["im:image"][0]["label"].stringValue
-        let imageHeight = json["im:image"][0]["attributes"]["height"].stringValue
-        let auxString = imageHeight + "x" + imageHeight
-        
-        self.image = imageAux.replacingOccurrences(of: auxString, with: "300x300")
+        let imageAux = json["im:image"][2]["label"].stringValue
+        self.image = imageAux
+
         self.summary = json["summary"]["label"].stringValue
         self.price = json["im:price"]["label"].stringValue
         self.director = json["im:artist"]["label"].stringValue

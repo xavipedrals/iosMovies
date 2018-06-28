@@ -22,7 +22,6 @@ class NetworkController {
     private static var getMoviesUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/json"
     private static var getMoviesWithGenreUrl = "https://itunes.apple.com/us/rss/topmovies/limit=30/genre=4401/json"
     
-    
     static func addOffsetTo(url: inout String, offset: Int) {
         let limit = offset + 30
         url = url.replacingOccurrences(of: "30", with: String(limit))
