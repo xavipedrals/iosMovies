@@ -20,7 +20,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     func initSegment() {
         let font = UIFont(name: "Montserrat-Light", size: 12.0)
-        genreSegmentedControl.setTitleTextAttributes([NSFontAttributeName: font!], for: .normal)
+        genreSegmentedControl.setTitleTextAttributes([NSAttributedStringKey.font: font!], for: .normal)
         
     }
     
